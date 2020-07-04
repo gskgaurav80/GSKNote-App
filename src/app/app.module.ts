@@ -40,7 +40,8 @@ import { EditComponent } from './notes/edit/edit.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [NotesService],
   bootstrap: [AppComponent]

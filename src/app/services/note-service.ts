@@ -11,18 +11,24 @@ import { Subject } from 'rxjs';
 export class NotesService {
     notesChanged = new Subject<Note[]>();
 
-    private notes: Note[] = [
-        new Note('Teamcenter Compliance','Teamcente is a tool used for PLM Domain'),
-        new Note('Teamcenter Compliance','Teamcente is a tool used for PLM Domain'),
-        new Note('Teamcenter Compliance','Teamcente is a tool used for PLM Domain')
-      ];
+    // private notes: Note[] = [
+    //     new Note('Teamcenter Compliance','Teamcente is a tool used for PLM Domain'),
+    //     new Note('AWS Compliance','Teamcente is a tool used for PLM Domain'),
+    //     new Note('Teamcenter Compliance','Teamcente is a tool used for PLM Domain')
+    //   ];
 
+      private notes: Note[] =[];
       getNotes()
       {
           return this.notes.slice();
       }
       getNote(index: number) {
           return this.notes[index];
+      }
+
+      setNotes(notes: Note[]) {
+          this.notes = notes;
+          this.notesChanged.next(this.notes.slice());
       }
       addNote(note:Note) {
           this.notes.push(note);

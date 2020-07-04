@@ -1,3 +1,4 @@
+import { DataStorageService } from './../../data-storage.service';
 import { NotesService } from './../../services/note-service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
@@ -14,7 +15,8 @@ editMode = false;
 noteForm: FormGroup;
   constructor(private route: ActivatedRoute,
     private noteService: NotesService,
-    private router: Router) { }
+    private router: Router,
+    private dataService: DataStorageService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -39,6 +41,9 @@ noteForm: FormGroup;
       this.router.navigate(['../'],{relativeTo:this.route});
     }
   
+    onSave() {
+      this.dataService.storeNotes();
+    }
 private initForm()
 {
   let noteTitle ='';

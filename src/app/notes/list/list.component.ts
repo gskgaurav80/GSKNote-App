@@ -1,3 +1,4 @@
+import { DataStorageService } from './../../data-storage.service';
 import { NotesService } from './../../services/note-service';
 import { Note } from './../notes.model';
 
@@ -17,7 +18,8 @@ export class ListComponent implements OnInit,OnDestroy {
 
   constructor(private noteService: NotesService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private dataservice: DataStorageService) { }
 
   ngOnInit(): void {
     this.subscription = this.noteService.notesChanged.subscribe(
@@ -31,6 +33,10 @@ export class ListComponent implements OnInit,OnDestroy {
 onNewNote()
 {
   this.router.navigate(['new'],{relativeTo: this.route});
+}
+onFetchNote()
+{
+  this.dataservice.fetchNotes();
 }
 ngOnDestroy() {
  this.subscription.unsubscribe();
