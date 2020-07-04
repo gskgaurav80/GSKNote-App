@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
+@import '../src/main.style.scss';
 body {
     padding-top: 8ch;
     /* padding-right: 8ch;? */
