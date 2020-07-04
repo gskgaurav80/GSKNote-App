@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gsknote-app": {
+      "hosting": {
+        "GSKNote-App": [
+          "gsknote-app"
+        ]
+      }
+    }
+  }
+}

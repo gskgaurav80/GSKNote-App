@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewNote()">New File</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <app-item 
+         *ngFor="let noteEl of notes; let i= index"
+        [note]="noteEl"
+        [index]="i"></app-item>
+    </div>
+</div>
+
