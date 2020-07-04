@@ -28,6 +28,7 @@ export class ListComponent implements OnInit,OnDestroy {
       }
     );
     this.notes = this.noteService.getNotes();
+    this.onFetchNote();
   }
 
 onNewNote()
@@ -36,7 +37,7 @@ onNewNote()
 }
 onFetchNote()
 {
-  this.dataservice.fetchNotes();
+  this.dataservice.fetchNotes().subscribe();
 }
 ngOnDestroy() {
  this.subscription.unsubscribe();

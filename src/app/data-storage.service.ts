@@ -2,6 +2,7 @@ import { Note } from './notes/notes.model';
 import { NotesService } from './services/note-service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import{ tap } from 'rxjs/operators';
 
 @Injectable({providedIn:'root'})
 
@@ -11,17 +12,15 @@ export class DataStorageService {
    
    storeNotes() {
        const notes =this.noteService.getNotes();
-       this.http.put('https://gsknote-app.firebaseio.com/notes.json',
+       this.http.put('https://gsknote-app.firebaseio.com//notes.json',
        notes).subscribe(response=>{
-           
-       })
+          console.log(response); });
    }
 
    fetchNotes(){
-       this.http.get<Note[]>('https://gsknote-app.firebaseio.com/notes.json')
-       .subscribe(notes => { 
-           this.noteService.setNotes(notes);
-       });
+      return this.http.get<Note[]>('https://gsknote-app.firebaseio.com//notes.json')
+       .pipe(tap(notes => { 
+        this.noteService.setNotes(notes);}))
 
    }
 }

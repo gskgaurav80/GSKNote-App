@@ -1,3 +1,4 @@
+import { NotesResolverService } from './services/note-resolver.service';
 import { EditComponent } from './notes/edit/edit.component';
 import { DetailComponent } from './notes/detail/detail.component';
 import { HomeComponent } from './home/home.component';
@@ -10,10 +11,12 @@ const routes: Routes = [
   { path: "notes", component: NotesComponent, children: [
       {path: '' , component: HomeComponent},
       {path: 'new', component:EditComponent},
-      { path: ':id' , component:DetailComponent},
-      {path: ':id/edit', component:EditComponent}
+      { path: ':id' , component:DetailComponent, 
+      resolve:[NotesResolverService]},
+      {path: ':id/edit', component:EditComponent,
+      resolve:[NotesResolverService]}
   ]}
-//   { path: "notes/", component: }
+//   { path: "notes/", component: } 
 ];
 
 @NgModule({

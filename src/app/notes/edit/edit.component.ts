@@ -31,9 +31,14 @@ noteForm: FormGroup;
   {
     if(this.editMode) {
       this.noteService.updateNote(this.id,this.noteForm.value);
+      // this.dataService.fetchNotes().subscribe();
+      this.dataService.storeNotes();
     }
     else {
       this.noteService.addNote(this.noteForm.value);
+      this.dataService.storeNotes();
+      this.editMode=true;
+
     }
     this.onCancel();
     }
@@ -41,9 +46,9 @@ noteForm: FormGroup;
       this.router.navigate(['../'],{relativeTo:this.route});
     }
   
-    onSave() {
-      this.dataService.storeNotes();
-    }
+    // onSave() {
+    //   this.dataService.storeNotes();
+    // }
 private initForm()
 {
   let noteTitle ='';

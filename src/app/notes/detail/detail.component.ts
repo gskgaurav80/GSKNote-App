@@ -1,3 +1,4 @@
+import { DataStorageService } from './../../data-storage.service';
 import { NotesService } from './../../services/note-service';
 import { Note } from './../notes.model';
 import { Component, OnInit, Input } from '@angular/core';
@@ -13,7 +14,8 @@ export class DetailComponent implements OnInit {
  id:number;
   constructor(private route: ActivatedRoute,
     private noteService:NotesService,
-    private router:Router) { }
+    private router:Router,
+    private dataService: DataStorageService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -31,6 +33,7 @@ export class DetailComponent implements OnInit {
   {
     this.noteService.deleteNote(this.id);
     this.router.navigate(['/notes']);
+    this.dataService.storeNotes();
   }
 
 }
