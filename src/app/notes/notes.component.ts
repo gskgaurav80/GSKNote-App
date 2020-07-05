@@ -10,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesComponent implements OnInit {
 selectedNote: Note;
+opened: boolean = false;
+
  
   ngOnInit(): void {
     
   }
-
+  toggleSidebar() {
+    this.opened = !this.opened;
+  }
 }
