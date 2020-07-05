@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <body>
-<div class="card ">
+<div class="card " >
 
     <h5 class="card-header info-color white-text text-center py-4">
       <strong>{{note.title }}</strong>
@@ -11,7 +11,7 @@
           <br>
           <br> </div>
           <div class="card-footer info-color white-text text-center py-4">
-           <strong>2 days ago
+           <strong>{{ note.date | date:'medium'}}
         </strong>           </div>
    
   </div>

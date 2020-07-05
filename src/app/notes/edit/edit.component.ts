@@ -30,20 +30,19 @@ noteForm: FormGroup;
   onSubmit()
   {
     if(this.editMode) {
-      this.noteService.updateNote(this.id,this.noteForm.value);
-      // this.dataService.fetchNotes().subscribe();
+      this.noteService.updateNote(this.id, this.noteForm.value);
       this.dataService.storeNotes();
     }
     else {
       this.noteService.addNote(this.noteForm.value);
       this.dataService.storeNotes();
       this.editMode=true;
-
     }
     this.onCancel();
     }
+
     onCancel() {
-      this.router.navigate(['../'],{relativeTo:this.route});
+      this.router.navigate(['../../'],{relativeTo:this.route});
     }
   
     // onSave() {

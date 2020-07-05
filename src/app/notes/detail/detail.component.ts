@@ -12,10 +12,16 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class DetailComponent implements OnInit {
  note: Note;
  id:number;
+ public date: Date = new Date();
+
   constructor(private route: ActivatedRoute,
     private noteService:NotesService,
     private router:Router,
-    private dataService: DataStorageService) { }
+    private dataService: DataStorageService) { 
+      setInterval(() => {
+        this.date = new Date();
+      }, 1);
+    }
 
   ngOnInit(): void {
     this.route.params.subscribe(
