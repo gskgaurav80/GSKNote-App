@@ -8,13 +8,19 @@
     </div>
 </div> -->
 <div class="card ">
+<div class="form-group fg--search">
+    <input type="text" class="form-control" placeholder="Search here" 
+     [(ngModel)]="searchTerm">
+    <button><i class="fa fa-search"></i></button>
+    
+</div>
 
     <!-- <h5 class="card-header info-color white-text text-center">
       <strong>{{note.title }}</strong>
     </h5> -->
     <div class="card-body">
         <app-item 
-         *ngFor="let noteEl of notes; let i= index"
+         *ngFor="let noteEl of notes | noteFilter:searchTerm; let i= index "
         [note]="noteEl"
         [index]="i"></app-item>
     </div>

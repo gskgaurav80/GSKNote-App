@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit,OnDestroy {
-
+  searchTerm: string;
   notes: Note[];
   subscription: Subscription;
 

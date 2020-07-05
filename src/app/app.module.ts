@@ -1,3 +1,4 @@
+import { FilterNotes } from './notes/filer-notes.pipe';
 import { NotesService } from './services/note-service';
 import { ItemComponents } from './notes/Item/item.component';
 import { ItemComponent } from './notes/list/item/item.component';
@@ -30,7 +31,8 @@ import { EditComponent } from './notes/edit/edit.component';
     ListComponent,
     ItemComponent,
     ItemComponents,
-    EditComponent
+    EditComponent,
+    FilterNotes
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { EditComponent } from './notes/edit/edit.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+    
   ],
   providers: [NotesService],
   bootstrap: [AppComponent]
