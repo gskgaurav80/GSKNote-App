@@ -1,10 +1,25 @@
 # GSKNoteApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+Experience the new versin of notesApp built in Angular 10.
+# Features Available in App are:
+    - Collapse/Expand sidebar for note titles
+    - CRUD Operations in  Notes
+    - Responsive UI for different form factors
+    - Deep Search within notes (search title & note text)::    Search results will be shown in the sidebar as user types in the     search bar
+    - Reactive interface that updates different sections according to actions performed on other sections
+    - Auto-updating timestamp
+ # Technlogy and Framwork used:
+                         Angular 10 and Bootstrap 4.
+# External Library Used:
+                       ng-sidebar,Rxjs,Firebase
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can visit the application using this link : 
+https://gsknote-app.firebaseapp.com
 
 ## Code scaffolding
 
