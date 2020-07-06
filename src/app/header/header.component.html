@@ -1,33 +1,30 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<!-- <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand" >GSKNotesApp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+ <nav class="navbar navbar-expand-md bd-navbar fixed-top">
+    <a routerLink="/" class="navbar-brand">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKkqjZKU-GJGMAlHmx9XgBZqejMHvcHc7SMw&usqp=CAU" 
+      width="20%" height="35px" alt="">
+      GSKNotesApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+     data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <i class="fa fa-bars"></i>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/notes" >New</a>
-          </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link">Edit</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" >Delete</a>
-          </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <div class="navbar-collapse collapse " id="navbarsExampleDefault">
+      <!-- <ul class="navbar-nav mr-auto">
+        <li class="nav-item "> -->
+          <!-- <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a> -->
+          
+          <button class="btn" (click)="onNewNote()"> 
+            <i class="far fa-file-alt" style="font-size: 35px;"></i>
+        </button>
+        <!-- </li>
+      </ul> -->
     </div>
-     -->
+    
 
-     <section class="noteapp">
+     <!-- <section class="noteapp">
 
       <header class="noteapp__header header" style="background-color: rgb(255, 208, 0);">
         <div class="header__logo">
@@ -41,4 +38,4 @@
         
         </div>
       </header>
-      </section>
+      </section> -->

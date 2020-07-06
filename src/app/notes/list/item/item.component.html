@@ -2,10 +2,11 @@
 <a 
 style="cursor: pointer;"
 [routerLink]="[index]"
-routerLinkActive="active"
+routerLinkActive="class-name"
 class="list-group-item ">
 <div class="pull-left">
-<h4 class="list-group-item-heading">{{ note.title }} </h4>
-<p class="list-group-item-text">{{ note.content }}</p>
+<h4 class="list-group-item-heading" style="color: black;">{{ note.title |titlecase }} </h4>
+<p class="list-group-item-text">{{note.date| date:'shortTime'}}   {{(note.content.length>30)? (note.content | slice:0:60)+'......':(note.content) }}</p>
+
 </div>  
 </a>

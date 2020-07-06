@@ -2,7 +2,7 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '../src/main.style.scss';
 body {
-    padding-top: 8ch;
+    padding-top: 12ch;
     /* padding-right: 8ch;? */
     padding-left: 8ch;
 }
